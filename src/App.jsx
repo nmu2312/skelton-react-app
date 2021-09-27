@@ -1,10 +1,19 @@
-import React from 'react';
+import { React, useEffect, useState } from 'react';
 import './App.scss';
 
-const App = () => (
-  <>
-    <h1>Hello, React!</h1>
-  </>
-);
+const App = () => {
+  // Sample Code
+  const [titleText, setTitleText] = useState('');
+
+  useEffect(() => {
+    setTitleText('Hello, React!');
+  }, []);
+
+  return (
+    <>
+      <h1>{titleText}</h1>
+    </>
+  );
+};
 
 export default App;
